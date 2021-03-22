@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+
+int main ()
+{
+ int  i,j,k,n;
+ int l=0,m=0,p=0;
+ scanf("%d",&n);
+ scanf("%d",&k);
+ for(i=1;i<=k;i++)
+ {
+     for(j=i+1;j<=n;j++)
+     {
+         if(l<(i&j) && k>(i&j) )
+         {
+             l=i&j;
+         }
+         if(m<(i|j) && k>(i|j) )
+         {
+             m=i|j;
+         }
+         if(p<(i^j) && k>(i^j) )
+         {
+             p=i^j;
+         }
+
+     }
+ }
+ printf("%d\n",l);
+ printf("%d\n",m);
+ printf("%d\n",p);
+}
